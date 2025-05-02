@@ -1,0 +1,55 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #ffffff; /* Pure white background */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #2e7d32; /* Nice green */
+}
+
+.nav-link {
+    color: #555;
+}
+
+.nav-link:hover {
+    color: #2e7d32;
+}
+
+.hero {
+    background-color: #f8f9fa; /* Light gray-white */
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #000000; /* Green heading */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+    background-color: #2e7d32;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1b5e20;
+}
+
+.btn-outline-primary {
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2e7d32;
+    color: white;
+}
+
+footer {
+    background-color: #fff;
+    color: #666;
+    font-size: 0.9rem;
+}
