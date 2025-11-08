@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExchangeWise - Logout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #f8f9fb;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: #fff;
+            height: 100vh;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            color: #0a74da;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 12px 10px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background: #eaf3ff;
+            color: #0a74da;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .logout-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .logout-card h1 {
+            font-size: 24px;
+            color: #0a74da;
+            margin-bottom: 10px;
+        }
+
+        .logout-card p {
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .logout-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-logout {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-logout:hover {
+            background-color: #b92c3a;
+        }
+
+        .btn-cancel {
+            background-color: #f0f0f0;
+        }
+
+        .btn-cancel:hover {
+            background-color: #e2e2e2;
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div>
+            <h2>ExchangeWise</h2>
+            <div class="nav">
+                <a href="Admindashboard.html">🏠 Dashboard</a>
+                <a href="reward.html">🎁 Rewards</a>
+                <a href="managerate.html">💱 Manage Rates</a>
+                <a href="Transactions_admin.html">💳 Transactions</a>
+                <a href="manageusers.html">👥 Users</a>
+                <a href="managevendors.html">🏬 Vendors</a>
+                <a href="settings.html">⚙️ Settings</a>
+                <a href="logout.html" class="active">🚪 Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="logout-card">
+            <div class="icon">🚪</div>
+            <h1>Confirm Logout</h1>
+            <p>Are you sure you want to log out from the ExchangeWise Admin Dashboard?</p>
+
+            <div class="logout-buttons">
+                <button class="btn btn-logout" onclick="logout()">Yes, Logout</button>
+                <button class="btn btn-cancel" onclick="cancelLogout()">Cancel</button>
+            </div>
+
+            <div class="footer">
+                © 2025 ExchangeWise Admin Panel
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            // Simulated logout redirect
+            alert("You have been logged out successfully!");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+
+        function cancelLogout() {
+            window.location.href = "Admindashboard.html";
+        }
+    </script>
+</body>
+
+</html>

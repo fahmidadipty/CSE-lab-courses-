@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ExchangeWise - Reset Password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            border-bottom: 1px solid #f8faf9;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+        }
+
+        .logo span {
+            font-weight: bold;
+            font-size: 18px;
+            color: #0f6a29;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .login-btn {
+            background: #0f6a29;
+            color: white;
+            border: none;
+            padding: 6px 18px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Reset Password Card */
+        .card {
+            width: 320px;
+            border: 2px solid #0f6a29;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #d9f0e6;
+        }
+
+        .card h2 {
+            color: #0f6a29;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .card label {
+            display: block;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: left;
+            margin: 8px 0 5px;
+        }
+
+        .card input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .reset-btn {
+            width: 100%;
+            background: #0f6a29;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 12px 0;
+        }
+
+        .back-login {
+            font-size: 13px;
+        }
+
+        .back-login a {
+            color: #0f6a29;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer (outside box) */
+        .footer {
+            border-top: 1px solid #eee;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            background: #f9f9f9;
+        }
+
+        .footer a {
+            color: #0a802c;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>ExchangeWise</span>
+        </div>
+        <div class="nav">
+            <a href="#">Products</a>
+            <a href="#">Business</a>
+            <a href="#">Learn</a>
+            <button class="login-btn">login</button>
+        </div>
+    </div>
+
+    <!-- Reset Password card -->
+    <div class="container">
+        <div class="card">
+            <h2>Reset Password</h2>
+            <p>Enter your new password below</p>
+
+            <div class="error" id="error-msg"></div>
+
+            <label>New Password</label>
+            <input type="password" id="new-password" placeholder="Enter new password">
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm new password">
+
+            <button class="reset-btn" onclick="resetPassword()">Reset Password</button>
+
+            <div class="back-login">
+                Remembered your password? <a href="login1.html">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#">Help & support</a> |
+        <a href="#">Security</a> |
+        <a href="#">Contact</a>
+    </div>
+
+    <script>
+        function resetPassword() {
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const errorMsg = document.getElementById('error-msg');
+
+            if (newPassword === '' || confirmPassword === '') {
+                errorMsg.style.color = 'red';
+                errorMsg.textContent = "Please fill in both fields.";
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                errorMsg.style.color = 'red';
+                errorMsg.textContent = "Passwords do not match!";
+                return;
+            }
+
+            // Password reset successful
+            errorMsg.style.color = 'green';
+            errorMsg.textContent = "Password reset successful! Redirecting to dashboard...";
+
+            // Redirect to dashboard after 2 seconds
+            setTimeout(() => {
+                window.location.href = 'dash.html'; // ekhane apnar dashboard page link diben
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

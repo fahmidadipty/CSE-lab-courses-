@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExchangeWise - Rates</title>
+    <style>
+        body {
+            background: #f7f9fc;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 40px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+        }
+
+        .navbar .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0a802c;
+        }
+
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .navbar .menu a:hover,
+        .navbar .menu a.active {
+            color: #0a802c;
+        }
+
+        /* Rate Box */
+        .rate-box {
+            max-width: 450px;
+            margin: 30px auto;
+            background: #d9f0e6;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+            padding: 20px;
+        }
+
+        .rate-box h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #111;
+        }
+
+        .rate-group {
+            margin-bottom: 18px;
+        }
+
+        .rate-group h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #00a14f;
+        }
+
+        .rate-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            background: #fafafa;
+        }
+
+        .rate-left {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .rate-right {
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* Footer (outside box) */
+        .footer {
+            border-top: 1px solid #eee;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            background: #f9f9f9;
+        }
+
+        .footer a {
+            color: #0a802c;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>ExchangeWise</span>
+        </div>
+        <div class="menu">
+            <a href="userdashboard.php">Dashboard</a>
+            <a href="#">Products</a>
+            <a href="#" class="active">Rates</a>
+            <a href="#">Business</a>
+            <a href="#">Learn</a>
+            <a href="logout.php">Logout</a>
+        </div>
+    </div>
+    <!-- Rate Box -->
+    <div class="rate-box">
+        <h2>Exchange Rates</h2>
+
+        <!-- USD Rates -->
+        <div class="rate-group">
+            <h3>USD to Others</h3>
+            <div class="rate-item">
+                <div class="rate-left">1 USD =</div>
+                <div class="rate-right">0.92 EUR</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 USD =</div>
+                <div class="rate-right">83.20 INR</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 USD =</div>
+                <div class="rate-right">110.50 BDT</div>
+            </div>
+        </div>
+
+        <!-- EUR Rates -->
+        <div class="rate-group">
+            <h3>EUR to Others</h3>
+            <div class="rate-item">
+                <div class="rate-left">1 EUR =</div>
+                <div class="rate-right">1.08 USD</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 EUR =</div>
+                <div class="rate-right">90.50 INR</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 EUR =</div>
+                <div class="rate-right">120.75 BDT</div>
+            </div>
+        </div>
+
+        <!-- INR Rates -->
+        <div class="rate-group">
+            <h3>INR to Others</h3>
+            <div class="rate-item">
+                <div class="rate-left">1 INR =</div>
+                <div class="rate-right">0.012 USD</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 INR =</div>
+                <div class="rate-right">0.011 EUR</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 INR =</div>
+                <div class="rate-right">1.33 BDT</div>
+            </div>
+        </div>
+
+        <!-- BDT Rates -->
+        <div class="rate-group">
+            <h3>BDT to Others</h3>
+            <div class="rate-item">
+                <div class="rate-left">1 BDT =</div>
+                <div class="rate-right">0.009 USD</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 BDT =</div>
+                <div class="rate-right">0.008 EUR</div>
+            </div>
+            <div class="rate-item">
+                <div class="rate-left">1 BDT =</div>
+                <div class="rate-right">0.75 INR</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#">Help & support</a> |
+        <a href="#">Security</a> |
+        <a href="#">Contact</a>
+    </div>
+</body>
+
+</html>
